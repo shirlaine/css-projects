@@ -1,0 +1,24 @@
+
+.container { /*PARENT*/
+  display: grid;
+  grid-template-columns: [one-start]300px[one-end two-start] 1fr [two-end three-start] 200px [three-end];
+  grid-template-rows: repeat(3, auto);
+}
+
+ .header { /*CHILD*/
+  grid-column: 1/4;
+  grid-row: 1/2;
+  background-color: #FD706C;
+}
+
+ .content { /*CHILD*/ /*Change grid-row/column numbers on child*/
+  grid-column: 1/3;
+  grid-row: 2/3;
+  background-color: #FECB65;
+}
+
+ .footer {
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  background-color: #9ab9d1;
+}

@@ -1,0 +1,25 @@
+.container { /*PARENT*/ /*Change grid-template-areas on parent*/
+  display: grid;
+  grid-template-columns: 300px 1fr 200px;
+  grid-template-rows: repeat(3, auto);
+
+  grid-template-areas:
+    "header  header  header"
+    "  .     content content"
+    "footer  footer  footer" ;
+}
+
+ .header { /*CHILD*/
+  grid-area: header;
+  background-color: #FD706C;
+}
+
+ .content { /*CHILD*/
+  grid-area: content;
+  background-color: #FECB65;
+}
+
+ .footer { /*CHILD*/
+  grid-area: footer;
+  background-color: #9ab9d1;
+}
